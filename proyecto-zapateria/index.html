@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto</title>
+</head>
+<body>
+
+<h2>Formulario de Contacto</h2>
+
+<form id="form">
+
+Nombre:
+<input type="text" maxlength="50" required><br><br>
+
+Alias:
+<input type="password"><br><br>
+
+Correo:
+<input type="email" id="correo"><br><br>
+
+Teléfono:
+<input type="tel" id="telefono"><br><br>
+
+Instagram:
+<input type="url" id="instagram"><br><br>
+
+Edad:
+<input type="number" min="0" max="110" required><br><br>
+
+Género:
+<input type="radio" name="genero" value="Hombre" required> Hombre
+<input type="radio" name="genero" value="Mujer"> Mujer
+<input type="radio" name="genero" value="Otros"> Otros
+<br><br>
+
+Foto:
+<input type="file"><br><br>
+
+Contacto por defecto:
+<select id="contacto" required>
+<option value="">Seleccione una opción</option>
+</select><br><br>
+
+<input type="checkbox" required> Aceptar publicidad<br><br>
+
+Comentarios:
+<textarea id="comentarios" maxlength="1000"></textarea>
+<button type="button" onclick="borrar()">🗑</button>
+<br><br>
+
+<input type="hidden" id="hora">
+
+<input type="submit" value="Enviar">
+<input type="reset" value="Cancelar">
+
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
