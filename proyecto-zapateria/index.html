@@ -3,6 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <title>Contacto</title>
+
+<style>
+body {
+    font-family: Arial;
+    background-color: #f4f4f4;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+.botones {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.papelera {
+    background: none;
+    border: none;
+    font-size: 18px;
+}
+</style>
+
 </head>
 <body>
 
@@ -10,49 +59,51 @@
 
 <form id="form">
 
-Nombre:
-<input type="text" maxlength="50" required><br><br>
+<label>Nombre:</label>
+<input type="text" maxlength="50" required>
 
-Alias:
-<input type="password"><br><br>
+<label>Alias:</label>
+<input type="password">
 
-Correo:
-<input type="email" id="correo"><br><br>
+<label>Correo:</label>
+<input type="email" id="correo">
 
-Teléfono:
-<input type="tel" id="telefono"><br><br>
+<label>Teléfono:</label>
+<input type="tel" id="telefono">
 
-Instagram:
-<input type="url" id="instagram"><br><br>
+<label>Instagram:</label>
+<input type="url" id="instagram">
 
-Edad:
-<input type="number" min="0" max="110" required><br><br>
+<label>Edad:</label>
+<input type="number" min="0" max="110" required>
 
-Género:
+<label>Género:</label><br>
 <input type="radio" name="genero" value="Hombre" required> Hombre
 <input type="radio" name="genero" value="Mujer"> Mujer
 <input type="radio" name="genero" value="Otros"> Otros
+
 <br><br>
 
-Foto:
-<input type="file"><br><br>
+<label>Foto:</label>
+<input type="file">
 
-Contacto por defecto:
+<label>Contacto por defecto:</label>
 <select id="contacto" required>
 <option value="">Seleccione una opción</option>
-</select><br><br>
+</select>
 
-<input type="checkbox" required> Aceptar publicidad<br><br>
+<input type="checkbox" required> Aceptar publicidad
 
-Comentarios:
+<label>Comentarios:</label>
 <textarea id="comentarios" maxlength="1000"></textarea>
-<button type="button" onclick="borrar()">🗑</button>
-<br><br>
+<button type="button" class="papelera" onclick="borrar()">🗑</button>
 
 <input type="hidden" id="hora">
 
-<input type="submit" value="Enviar">
-<input type="reset" value="Cancelar">
+<div class="botones">
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Cancelar">
+</div>
 
 </form>
 
