@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapatería — Servicios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+    <span>Zapatería</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+
+<div class="breadcrumb">
+  <a href="index.html">Inicio</a> &rsaquo; Servicios
+</div>
+
+<!--header de la pagina -->
+<div class="page-header">
+  <p class="section-label">Lo que ofrecemos</p>
+  <h1>Nuestros Servicios</h1>
+  <p>Reparación profesional de calzado y duplicado de llaves. Rapidez, calidad y precio justo.</p>
+</div>
+
+<!-- contenido -->
+<section>
+  <div class="tabs">
+    <button class="tab-btn active" onclick="showTab('reparacion', this)">👟 Reparación de Calzado</button>
+    <button class="tab-btn" onclick="showTab('llaves', this)">🔑 Duplicado de Llaves</button>
+    <button class="tab-btn" onclick="showTab('presupuesto', this)">📋 Presupuestos</button>
+  </div>
+
+  <!-- reparación -->
+  <div id="reparacion" class="tab-panel active">
+    <div class="cards-grid" style="margin-bottom:48px;">
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Suelas y tacones</h3>
+          <p>Cambio y reparación de suelas desgastadas, tacones rotos o deteriorados. Materiales duraderos y buen acabado.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Costuras y cremalleras</h3>
+          <p>Reparamos costuras abiertas y sustituimos cremalleras rotas en botas, mocasines, zapatillas y bolsos.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Limpieza </h3>
+          <p>Devolvemos el color y la vitalidad a tus zapatos con productos especializados.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Otras reparaciones</h3>
+          <p>Plantillas, refuerzos internos, hebillas, cordones... Pregúntanos sin compromiso por cualquier reparación.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Tarifas orientativas</p>
+    <h3 class="section-title" style="font-size:1.4rem; margin-bottom:8px;">Precios de reparación</h3>
+    <p style="color:var(--gris); font-size:0.9rem; margin-bottom:0;">Los precios finales pueden variar según el estado del calzado. Consulta sin compromiso.</p>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Servicio</th>
+          <th>Precio desde</th>
+          <th>Plazo estimado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cambio de suela completa</td><td>xx €</td><td>xx </td></tr>
+        <tr><td>Cambio de tacón</td><td>xx  €</td><td>xx </td></tr>
+        <tr><td>Costura exterior</td><td>xx  €</td><td>xx </td></tr>
+        <tr><td>Cambio cremallera bota</td><td>xx  €</td><td>xx </td></tr>
+        <tr><td>Limpieza y acondicionado</td><td>xx  €</td><td>xx </td></tr>
+        <tr><td></td><td>xx  €</td><td>xx </td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--llaves -->
+  <div id="llaves" class="tab-panel">
+    <div class="cards-grid" style="margin-bottom:48px;">
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Llaves estándar</h3>
+          <p>Copia de llaves de casa, oficina. Servicio en el momento con amplia variedad de carcasas.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Llaves de coche</h3>
+          <p>Duplicado de llaves de vehículos con y sin mando a distancia. Consulta disponibilidad según modelo.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img-placeholder"></div>
+        <div class="card-body">
+          <h3>Llaves de seguridad</h3>
+          <p>Copia de llaves de alta seguridad. Servicio rápido y con garantía.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-label">Tarifas orientativas</p>
+    <h3 class="section-title" style="font-size:1.4rem; margin-bottom:8px;">Precios de llaves</h3>
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Tipo de llave</th>
+          <th>Precio desde</th>
+          <th>Plazo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Llave estándar</td><td>xx  €</td><td>En el momento</td></tr>
+        <tr><td>Llave de coche básica</td><td>xx  €</td><td>En el momento</td></tr>
+        <tr><td>Llave de seguridad</td><td>xx  €</td><td>Consultar</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- presupuesto -->
+  <div id="presupuesto" class="tab-panel">
+    <div style="max-width:600px;">
+      <p class="section-label">Sin compromiso</p>
+      <h2 class="section-title">Solicita un presupuesto</h2>
+      <div class="divider"></div>
+      <p style="color:var(--gris); margin-bottom:32px;">¿No encuentras tu servicio en la lista? ¿Tienes una reparación especial? Cuéntanos qué necesitas y te damos precio sin compromiso.</p>
+      <a href="contacto.html" class="btn btn-primary">Ir al formulario de contacto</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <h2>¿Tienes un encargo <em>urgente</em>?<br>Llámanos o pásate por la tienda</h2>
+  <a href="contacto.html" class="btn btn-primary">Contactar ahora</a>
+</div>
+
+<!-- footer-->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>Zapatería</span>
+      </div>
+      <p>Reparación de calzado, duplicado de llaves .</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">📍 C. Violeta, 94, 04720 Aguadulce, Almería</a></li>
+        <li><a href="#">📞 678950716</a></li>
+        <li><a href="#">✉️ </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Zapatería. Todos los derechos reservados.</span>
+    <span>Proyecto DAW</span>
+  </div>
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

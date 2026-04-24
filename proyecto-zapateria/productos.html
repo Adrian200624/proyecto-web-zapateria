@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zapatería — Productos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 8px 20px;
+      border: 2px solid var(--arena);
+      background: none;
+      border-radius: 2px;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gris);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--cuero-osc);
+      border-color: var(--cuero-osc);
+      color: var(--crema);
+    }
+    .product-card {
+      background: var(--crema);
+      border: 1px solid var(--arena);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(92,61,30,0.15);
+    }
+    .product-card .card-img-placeholder {
+      height: 220px; font-size: 3.5rem;
+    }
+    .product-card .card-body { padding: 20px; }
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; color: var(--cuero-osc); margin-bottom: 6px;
+    }
+    .product-card p { font-size: 0.88rem; color: var(--gris); }
+    .product-meta {
+      display: flex; justify-content: space-between; align-items: center; margin-top: 14px;
+    }
+    .product-price {
+      font-weight: 700; font-size: 1.1rem; color: var(--cuero);
+    }
+    .product-tag {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 4px 10px;
+      background: var(--arena); color: var(--cuero-osc); border-radius: 2px;
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+<!--nav -->
+<nav>
+  <div class="nav-logo">
+    <img src="img/logo.png" alt="Logo">
+    <span>Zapatería</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="productos.html" class="active">Productos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Inicio</a> &rsaquo; Productos
+</div>
+
+<!--header pagina -->
+<div class="page-header">
+  <p class="section-label">Nuestro catálogo</p>
+  <h1>Productos</h1>
+  <p>Cinturones de piel, llaves y llaveros, y todo lo que necesitas para cuidar tu calzado.</p>
+</div>
+
+<!--productos -->
+<section>
+  <p class="section-label">Catálogo</p>
+  <h2 class="section-title">Todos nuestros productos</h2>
+  <div class="divider"></div>
+
+  <!--filtros -->
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filtrar('todos', this)">Todos</button>
+    <button class="filter-btn" onclick="filtrar('cinturones', this)">Cinturones</button>
+    <button class="filter-btn" onclick="filtrar('llaves', this)">Llaves y llaveros</button>
+    <button class="filter-btn" onclick="filtrar('tratamiento', this)">Cuidado del calzado</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="cards-grid" id="productos-grid">
+
+    <!-- CINTURONES -->
+    <div class="product-card" data-cat="cinturones">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Cinturón de piel liso</h3>
+        <p>Piel genuina curtida, hebilla metálica clásica. Disponible en marrón y negro en varios anchos.</p>
+        <div class="product-meta">
+          <span class="product-price">18,95 €</span>
+          <span class="product-tag">Cinturones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cinturones">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Cinturón trenzado</h3>
+        <p>Trenzado a mano en piel de alta calidad. Un clásico atemporal para cualquier ocasión.</p>
+        <div class="product-meta">
+          <span class="product-price">22,95 €</span>
+          <span class="product-tag">Cinturones</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="cinturones">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Cinturón elástico</h3>
+        <p>Cómodo y resistente, con hebilla de cierre automático. Ideal para el uso diario.</p>
+        <div class="product-meta">
+          <span class="product-price">12,95 €</span>
+          <span class="product-tag">Cinturones</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- llaves -->
+    <div class="product-card" data-cat="llaves">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Llave normal</h3>
+        <p>Hacer copia de la llave.</p>
+        <div class="product-meta">
+          <span class="product-price">7,95 €</span>
+          <span class="product-tag">Llaves y llaveros</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="llaves">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Llave de seguridad</h3>
+        <p>Llavero de acero inoxidable resistente. Compacto, duradero y con cierre seguro.</p>
+        <div class="product-meta">
+          <span class="product-price">4,95 €</span>
+          <span class="product-tag">Llaves y llaveros</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="llaves">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>LLavero</h3>
+        <p>LLavero para llevar tus llaves.</p>
+        <div class="product-meta">
+          <span class="product-price">desde 6,95 €</span>
+          <span class="product-tag">Llaves y llaveros</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- cuidado del calzado -->
+    <div class="product-card" data-cat="tratamiento">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Crema hidratante para piel</h3>
+        <p>Nutre e hidrata la piel del calzado, evitando grietas y alargando su vida útil. Incolora y de color.</p>
+        <div class="product-meta">
+          <span class="product-price">5,95 €</span>
+          <span class="product-tag">Cuidado del calzado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="tratamiento">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3></h3>
+        <p></p>
+        <div class="product-meta">
+          <span class="product-price">3,50 €</span>
+          <span class="product-tag">Cuidado del calzado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="tratamiento">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3></h3>
+        <p></p>
+        <div class="product-meta">
+          <span class="product-price">6,95 €</span>
+          <span class="product-tag">Cuidado del calzado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="tratamiento">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Plantillas </h3>
+        <p>Soporte de arco y acolchado en talón. Alivian la fatiga y mejoran la comodidad del calzado.</p>
+        <div class="product-meta">
+          <span class="product-price">8,95 €</span>
+          <span class="product-tag">Cuidado del calzado</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card" data-cat="tratamiento">
+      <div class="card-img-placeholder"></div>
+      <div class="card-body">
+        <h3>Cepillo</h3>
+        <p>Para limpiar y abrillantar el calzado de piel. Cerdas suaves que no rayan la superficie.</p>
+        <div class="product-meta">
+          <span class="product-price">4,50 €</span>
+          <span class="product-tag">Cuidado del calzado</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="strip">
+  <h2>¿Buscas algo <em>concreto</em>?<br>Llámanos y lo miramos</h2>
+  <a href="contacto.html" class="btn btn-primary">Contactar</a>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <img src="img/logo.png" alt="Logo">
+        <span>Zapatería</span>
+      </div>
+      <p>Reparación de calzado, duplicado de llaves y venta de zapatos.</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="#">📍 C. Violeta, 94, 04720 Aguadulce, Almería</a></li>
+        <li><a href="#">📞 678950716</a></li>
+        <li><a href="#">✉️ </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Zapatería. Todos los derechos reservados.</span>
+    <span>Proyecto DAW</span>
+  </div>
+</footer>
+
+<script>
+function filtrar(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product-card').forEach(card => {
+    if (cat === 'todos' || card.dataset.cat === cat) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+</script>
+</body>
+</html>
